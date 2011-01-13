@@ -44,11 +44,27 @@ be to allow the user to go back to the "cursor" mode.
 The main part of the code is located in 
 *slideshow/source/engine/slide/slideshowimpl.cxx*
 
+.. figure:: modes_current.png
+   :width: 1200px
+
+   Current mode switching
+
+.. figure:: modes.png
+   :width: 1200px
+
+   A better mode switching
+
+We will have to add a new menu entry ("cursor"), in order to allow the user to
+easily go back to the cursor mode. This will require us to change the
+underlying stucture of some files.
+
 Eraser
 --------------------------------------------------------------------------------
 When in the eraser mode, the tool only masks parts of the previously drawn
 shapes. It does not actually delete the erased parts. Additionally, nothing is
 saved. As for now, it only works in a graphical fashion. 
+
+Erased parts should be really erased and not displayed again.
 
 Éric has to send us a patch concerning memorization of components erased by the
 eraser. It may be an introduction to a future du/undo function.
