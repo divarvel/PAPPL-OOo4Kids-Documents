@@ -1,0 +1,31 @@
+digraph modes {
+    rankdir=LR
+    node [shape=plaintext];
+    state1 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD>Cursor</TD></TR>
+<TR><TD BGCOLOR="#00FF00">Pen</TD></TR>
+<TR><TD>Eraser</TD></TR>
+</TABLE>>];
+    state2 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD BGCOLOR="#00FF00">Cursor</TD></TR>
+<TR><TD>Pen</TD></TR>
+<TR><TD>Eraser</TD></TR>
+</TABLE>>];
+    state3 [label=<
+<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+<TR><TD>Cursor</TD></TR>
+<TR><TD>Pen</TD></TR>
+<TR><TD BGCOLOR="#00FF00">Eraser</TD></TR>
+</TABLE>>];
+
+    state1 -> state2;
+    state2 -> state1;
+
+    state2 -> state3;
+    state3 -> state2;
+
+    state1 -> state3;
+    state3 -> state1;
+}
