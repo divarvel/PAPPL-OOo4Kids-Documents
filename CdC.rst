@@ -34,10 +34,26 @@ Drawing modes
 When enabling the annotation feature, the user is in the "cursor" mode, and
 then can switch to the "pencil" mode or the "eraser" mode. When in "pencil" or
 "eraser" mode, it is tedious to go back to the cursor mode. A first task would
-be to allow the user to go back to the "cursor" mode
+be to allow the user to go back to the "cursor" mode.
+
+.. figure:: modes_current.png
+   :width: 1200px
+
+   Current mode switching
+
+.. figure:: modes.png
+   :width: 1200px
+
+   A better mode switching
+
+We will have to add a new menu entry ("cursor"), in order to allow the user to
+easily go back to the cursor mode. This will require us to change the
+underlying stucture of some files.
 
 Eraser
 --------------------------------------------------------------------------------
 When in the eraser mode, the tool only masks parts of the previously drawn
 shapes. It does not actually delete the erased parts. Additionally, nothing is
 saved. As for now, it only works in a graphical fashion. 
+
+Erased parts should be really erased and not displayed again.
