@@ -24,6 +24,11 @@ integration with Tablet PCs.
 Annotation feature
 ================================================================================
 
+Layout of the presenter screen
+--------------------------------------------------------------------------------
+We have to understand how the overlay works : how eraser and pen have been
+added to the layout. We also have to understand how UNO works.
+
 Source code cleanup
 --------------------------------------------------------------------------------
 Some source files are not cleanly organized and formatted. While developping
@@ -34,10 +39,16 @@ Drawing modes
 When enabling the annotation feature, the user is in the "cursor" mode, and
 then can switch to the "pencil" mode or the "eraser" mode. When in "pencil" or
 "eraser" mode, it is tedious to go back to the cursor mode. A first task would
-be to allow the user to go back to the "cursor" mode
+be to allow the user to go back to the "cursor" mode.
+
+The main part of the code is located in 
+*slideshow/source/engine/slide/slideshowimpl.cxx*
 
 Eraser
 --------------------------------------------------------------------------------
 When in the eraser mode, the tool only masks parts of the previously drawn
 shapes. It does not actually delete the erased parts. Additionally, nothing is
 saved. As for now, it only works in a graphical fashion. 
+
+Éric has to send us a patch concerning memorization of components erased by the
+eraser. It may be an introduction to a future du/undo function.
