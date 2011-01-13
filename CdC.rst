@@ -1,6 +1,16 @@
+:Info: See http://wiki.ooo4kids.org/index.php/Applications/CentraleNantes
+       for more information
+:Author: Benjamin Vialle <Benjamin.Vialle@centraliens-nantes.net>
+:Author: Clément Delafargue <clement@delafargue.name>
+:Date: $Date: 13 janvier 2011 $
+:Revision: $Revision: 01 $
+:Description: PAPPL 2011
+
 ================================================================================
 OpenOffice.org 4 Kids Specifications book
 ================================================================================
+
+.. contents:: Contents
 
 Project overview
 ================================================================================
@@ -13,7 +23,4 @@ integration with Tablet PCs.
 
 Annotation feature
 ================================================================================
-
-
-
 
