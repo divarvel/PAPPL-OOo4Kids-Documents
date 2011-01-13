@@ -24,3 +24,20 @@ integration with Tablet PCs.
 Annotation feature
 ================================================================================
 
+Source code cleanup
+--------------------------------------------------------------------------------
+Some source files are not cleanly organized and formatted. While developping
+the features, we will clean those files.
+
+Drawing modes
+--------------------------------------------------------------------------------
+When enabling the annotation feature, the user is in the "cursor" mode, and
+then can switch to the "pencil" mode or the "eraser" mode. When in "pencil" or
+"eraser" mode, it is tedious to go back to the cursor mode. A first task would
+be to allow the user to go back to the "cursor" mode
+
+Eraser
+--------------------------------------------------------------------------------
+When in the eraser mode, the tool only masks parts of the previously drawn
+shapes. It does not actually delete the erased parts. Additionally, nothing is
+saved. As for now, it only works in a graphical fashion. 
