@@ -31,8 +31,9 @@ added to the layout. We also have to understand how UNO works.
 
 Source code cleanup
 --------------------------------------------------------------------------------
-Some source files are not cleanly organized and formatted. While developping
-the features, we will clean those files.
+Some source files are not cleanly organized and formatted. While developing
+the features, we will clean those files (properly indent the code, delete
+trailing spaces, regroup the lines correctly).
 
 Drawing modes
 --------------------------------------------------------------------------------
@@ -56,15 +57,17 @@ The main part of the code is located in
 
 We will have to add a new menu entry ("cursor"), in order to allow the user to
 easily go back to the cursor mode. This will require us to change the
-underlying stucture of some files.
+underlying structure of some files.
 
 Eraser
 --------------------------------------------------------------------------------
 When in the eraser mode, the tool only masks parts of the previously drawn
-shapes. It does not actually delete the erased parts. Additionally, nothing is
-saved. As for now, it only works in a graphical fashion. 
+shapes. It does not actually delete the erased parts. In addition, nothing is
+saved. When leaving the slide, then displaying it again, the erased parts
+reappear.
 
-Erased parts should be really erased and not displayed again.
+Erased parts should be really erased and not displayed again when displaying
+the slides.
 
-Éric has to send us a patch concerning memorization of components erased by the
-eraser. It may be an introduction to a future du/undo function.
+The team is looking forward to implementing a do/undo feature in the
+annotation mode (while presenting the slides), but nothing is decided now.
