@@ -46,12 +46,12 @@ The main part of the code is located in
 *slideshow/source/engine/slide/slideshowimpl.cxx*
 
 .. figure:: modes_current.png
-   :width: 1200px
+   :width: 100%
 
    Current mode switching
 
 .. figure:: modes.png
-   :width: 1200px
+   :width: 100%
 
    A better mode switching
 

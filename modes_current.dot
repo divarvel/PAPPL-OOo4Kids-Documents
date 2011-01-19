@@ -20,10 +20,10 @@ digraph modes {
 <TR><TD BGCOLOR="#00FF00">Eraser</TD></TR>
 </TABLE>>];
 
-    state2 -> state1;
+    state2 -> state1 [label="Click on pen"];
 
-    state2 -> state3;
+    state2 -> state3 [label="Click on eraser"];
 
-    state1 -> state3;
-    state3 -> state1;
+    state1 -> state3 [label="Click on eraser"];
+    state3 -> state1 [label="Click on pen"];
 }
