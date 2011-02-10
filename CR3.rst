@@ -28,16 +28,17 @@ is important to note that OpenOffice.org is a very fragile build when it comes
 to CFLAGS."
 
 We went back to Debian and Ubuntu GNU/Linux distributions. Now everything
-compile fine. It is sad no to be able to continue with Gentoo which is the best
+compiles fine. It is sad no to be able to continue with Gentoo which is the best
 example of compiled source based distribution.
 
-Now, OOo4Kids compile fine on both Clément's and Benjamin's computers
+Now, OOo4Kids compiles fine on both Clément's and Benjamin's computers
 
 ================================================================================
 FOSDEM Attendance
 ================================================================================
 We attended Thorsten Berhens conference on LibreOffice at FOSDEM, untitled
-"Impress Hacking". We learned some tips for developping OOo4Kids.
+"Impress Hacking". We learned more about how the source files are organized
+within the directories.
 
 ================================================================================
 Done / To be done
@@ -50,7 +51,7 @@ We added a new mode, called CM_CURSOR_MODE in *slideshow.src/cxx*.
    New Menu entries
 
 
-We deleted some booleans and replacing them with enum structure. (
+We deleted some booleans and are replacing them with enums. (
 mbSwitchPenMode and mbSwitchEraserMode )
 
 .. figure:: screenshot_021.png
@@ -60,7 +61,7 @@ mbSwitchPenMode and mbSwitchEraserMode )
 
 
 We worked on *sd/source/ui/slideshow/slideshowimpl.cxx/hxx*. We discovered two
-classes with the same name (SlideShowImpl and SlideshowImpl) which are used for
+classes with *almost* the same name (SlideShowImpl and SlideshowImpl) which are used for
 Shlideshow drawing mode.
 
 A new menu entry has been created (still not internationalized (i18n) /
@@ -72,9 +73,10 @@ Moreover, we added several methods : virtual void SAL_CALL setUseCursor(
 
 New bug/feature
 ================================================================================
-A bug with the eraser suddenly appears. When clicking on eraser menu, the
-eraser icon is loaded but the eraser still have abilities of pen. So it must be
-a Boolean issue. Last year, students already had the same issue. We are
-re-reading reports to find help.
+A bug with the eraser suddenly appeared. When clicking on eraser menu item,
+the eraser icon is loaded but the eraser still behaves like a pen. It seems
+like the pen mode is not completely loaded, some parts of the code still act
+as if the pen mode was enabled. Last year, students already had the same
+issue. We are re-reading reports to find help.
 
 We are running OOo4Kids through gdb to find how we could remove this bug.
