@@ -1,0 +1,193 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{makeidx}
+\usepackage{index}
+\usepackage{url}
+\usepackage{float}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{xcolor}
+\usepackage{listings}
+%\usepackage[frenchb]{babel}
+
+\lstloadlanguages{C++}
+
+
+% Informations sur le document.
+\title{Rapport Final - PAPPL} \author{Clément \textsc{Delafargue}\\Benjamin \textsc{Vialle}} \date{\today}
+
+% Indentation sur le premier paragraphe d'un chapitre ou section.
+%\usepackage{indentfirst}
+
+% Réglage des marges
+\usepackage{geometry}
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2.5cm}
+
+% Mise en forme des en-têtes et pieds de page.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{1.5cm}
+\setlength{\textheight}{23cm}
+\setlength{\footskip}{2cm}
+\lhead{Final Report - PAPPL}
+\rhead{\leftmark}
+\lfoot{\includegraphics[height=1.5cm]{images/ECN.pdf}}
+\rfoot{\includegraphics[height=1.5cm]{images/OOo4Kids.png}}
+\fancyfoot[C]{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% PDF hyper-linking (set colors to black for printing)
+\usepackage[colorlinks]{hyperref}
+\usepackage[figure,table]{hypcap}
+\hypersetup{
+	bookmarksnumbered,
+	pdfstartview={FitH},
+	citecolor={blue},
+	linkcolor={black},
+	urlcolor={black},
+	pdfpagemode={UseOutlines}
+}
+\makeatletter
+\newcommand\org@hypertarget{}
+\let\org@hypertarget\hypertarget
+\renewcommand\hypertarget[2]{%
+  \Hy@raisedlink{\org@hypertarget{#1}{}}#2%
+} 
+\makeatother 
+
+%Pour les sauts de ligne entre les paragraphes
+\setlength{\parskip}{6pt}
+
+%Supprimer l'alinea
+\parindent=0pt
+
+%Pour l'index à la fin du rapport
+\makeindex
+
+% Début du document.
+\begin{document}
+
+% Définition de la page de garde.
+	\begin{titlepage}
+
+		% Pas d'en-tête et pied de page ni de numérotation de page.
+		\thispagestyle{empty}
+
+		% Logo Centrale
+		\begin{flushleft}
+			\includegraphics[scale=0.8]{images/ECN.pdf}
+		\end{flushleft}
+
+		\vfill
+		
+		\begin{center}
+			{\Large \textsc{École Centrale de Nantes}} \\
+
+		\vspace{1cm}
+
+		%Insertion d'un titre entouré de traits horizontaux.
+		\begin{tabular}{p{0cm} c}
+			\hline
+			& \\
+			& {\huge {\bfseries Final Report - PAPPL}} \\
+			& \\
+			\hline
+		\end{tabular}
+
+		\vspace{2.5cm}
+
+		\texttt{{\large Application Project - OpenOffice4Kids}} \\
+		\texttt{{\large January, 2011 - March 2011}} \\
+
+		\vspace{2.5cm}
+
+		% Insertion de deux noms		
+		\begin{tabular}{l c r}
+			\large{\emph{Author:}} & \hspace{5cm} & \large{\emph{Supervisor:}} \\
+			\large{Clément \textsc{Delafargue}} & \hspace{5cm} & \large{Éric \textsc{Bachard}}\\
+			\large{Benjamin \textsc{Vialle}} & \hspace{5cm} & \large{Morgan \textsc{Magnin}}\\
+		\end{tabular}
+
+		\end{center}
+
+		\vfill
+
+		% Insertion logo Rails
+		%\begin{flushleft}
+		%	\includegraphics[scale=0.3]{Ruby_on_Rails_logo.jpg}
+		%\end{flushleft}
+		
+		\begin{tabular}{l c r}
+				 \includegraphics[scale=0.4]{images/logo_EducOOo.jpg}  & \hspace{6cm} & \includegraphics[scale=0.4]{images/OOo4Kids.png}  \\
+		\end{tabular}
+		
+		% Insertion logo MarkUs
+		%\begin{flushright}
+		%	\includegraphics[scale=2]{markus.png}
+		%\end{flushright}
+		
+	\end{titlepage}
+
+
+\newpage
+\tableofcontents
+% Il faut compiler plusieurs fois pour obtenir une table des matière correcte.
+
+\newpage
+
+% Introduction sur une page, section non numérotée et intégrée à la table des matières.
+\setcounter{page}{1}
+\rhead{\Large{\textsc{Remerciements}}}
+\fancyfoot[C]{\thepage}
+\section*{Remerciements}
+\addcontentsline{toc}{section}{Remerciements}
+Remerciemements particuliers à \emph{Karen Reid}, \emph{Mike Conley},
+\emph{Severin Gehwolf} pour leur aide tout au long du projet.
+
+Merci à \emph{Nelle Varoquaux} pour ses retours sur notre code et ses revues
+de code sur Review Board.
+
+Merci aux professeurs de l'École Centrale de Nantes pour nous avoir accompagné
+tout au long du projet en nous faisant des retours sur l'utilisation de MarkUs
+:  \emph{Morgan Magnin}, \emph{Guillaume Moreau}, \emph{Myriam Servières},
+\emph{Vincent Tourre}.
+
+\newpage
+
+\rhead{\Large{\textsc{Introduction}}}
+\fancyfoot[C]{\thepage}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+
+\subsection*{Contexte}
+\addcontentsline{toc}{subsection}{Context}
+
+
+
+%Conclusion sur une page non numérotée et intégrée à la table des matières.
+\newpage
+\rhead{\Large{\textsc{Conclusion}}}
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+
+
+
+\newpage
+\rhead{\Large{\textsc{Images}}}
+\addcontentsline{toc}{section}{List of images}
+\listoffigures
+
+\newpage
+%\printindex
+\rhead{\Large{\textsc{Index}}}
+\fancyfoot[C]{\thepage}
+\addcontentsline{toc}{section}{Index}
+
+
+
+
+\end{document}

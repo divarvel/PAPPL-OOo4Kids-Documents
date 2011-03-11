@@ -1,0 +1,15 @@
+%makeindex -s rapport_index.sty rapport.idx
+preamble
+"
+\\begin{index}
+\\newpage
+\\rhead{\\Large{\\textsc{Index}}}
+\\fancyfoot[C]{\\thepage}
+\\addcontentsline{toc}{section}{Index}
+\\thispagestyle{fancy}
+{"
+
+postamble
+"\n\n}
+\\end{index}\n
+"
